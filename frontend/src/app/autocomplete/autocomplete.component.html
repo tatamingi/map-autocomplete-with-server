@@ -1,0 +1,12 @@
+<input type="text"
+       placeholder="Search for location..."
+       [(ngModel)]="name"
+       (ngModelChange)="setPredictions()">
+<div class="overlay" *ngIf="predictions.length > 0">
+  <ul>
+    <li *ngFor="let prediction of predictions" (click)="onSelect(prediction)">
+      <i class="fa fa-map-marker"></i>
+      {{prediction.description}}
+    </li>
+  </ul>
+</div>
