@@ -11,7 +11,6 @@ export class AppComponent {
   public zoom = 9;
 
   public setLocation = (location: Location): void => {
-    debugger
     this.location = location;
     this.zoom = 12;
   }
