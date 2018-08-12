@@ -1,8 +1,6 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PlaceAutocompleteService } from '../place-autocomplete.service';
-import { Subscription } from "rxjs/index";
 import { Location } from '../model/location';
-import * as _ from 'lodash';
 
 @Component({
   selector: 'app-autocomplete',
@@ -13,7 +11,6 @@ export class AutocompleteComponent implements OnInit {
   @Output() public locationEmitter = new EventEmitter<Location>();
 
   public location = new Location(36.4072574, 10.6224706, '', false);
-  public name: string;
   public predictions = [];
 
   constructor(
