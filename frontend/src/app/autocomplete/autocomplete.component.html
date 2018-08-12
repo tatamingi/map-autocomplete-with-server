@@ -1,7 +1,11 @@
-<input type="text"
-       placeholder="Search for location..."
-       [(ngModel)]="name"
-       (ngModelChange)="setPredictions()">
+<div class="input-wrapper">
+  <input type="text"
+         placeholder="Search for location..."
+         [(ngModel)]="location.name"
+         (ngModelChange)="setPredictions()">
+  <i class="fa fa-times-circle" (click)="removePlace()"></i>
+</div>
+
 <div class="overlay" *ngIf="predictions.length > 0">
   <ul>
     <li *ngFor="let prediction of predictions" (click)="onSelect(prediction)">

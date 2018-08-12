@@ -1,7 +1,7 @@
 <div class="wrapper">
-  <app-autocomplete (location)="setLocation($event)"></app-autocomplete>
+  <app-autocomplete (locationEmitter)="setLocation($event)"></app-autocomplete>
   <agm-map [latitude]="location.lat" [longitude]="location.lng" [zoom]="zoom">
-    <agm-marker [latitude]="location.lat" [longitude]="location.lng"></agm-marker>
+    <agm-marker *ngIf="location.visible" [latitude]="location.lat" [longitude]="location.lng"></agm-marker>
   </agm-map>
 </div>
 

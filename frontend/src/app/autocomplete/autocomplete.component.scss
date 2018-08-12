@@ -5,14 +5,20 @@
   z-index: 1;
 }
 
-input {
-  width: 100%;
+.input-wrapper {
   height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  height: 100%;
   border: none;
   outline: none;
   padding: 0 20px;
   box-sizing: border-box;
   font-size: 17px;
+  flex-grow: 1;
 }
 
 ::placeholder {
@@ -24,6 +30,8 @@ input {
   width: 100%;
   background: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  max-height: 40vh;
+  overflow: auto;
 }
 
 ul {
